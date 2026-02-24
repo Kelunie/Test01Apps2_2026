@@ -43,6 +43,7 @@ export const ENDPOINTS = {
 export const STORAGE_KEYS = {
   authToken: "auth_token",
   authUser: "auth_user",
+  cartItems: "cart_items",
   purchaseHistory: "purchase_history",
 };
 

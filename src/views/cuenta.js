@@ -92,7 +92,7 @@ export default function Cuenta() {
 		<ScrollView contentContainerStyle={{ padding: 20, gap: 12 }}>
 			<Text style={{ fontSize: 24, fontWeight: "700" }}>Cuenta</Text>
 			<Text style={{ fontSize: 16, color: "#666" }}>
-				Usuario: {displayName || "Sin datos"}
+				Nombre: {displayName || "Sin datos"}
 			</Text>
 
 			<View style={{ borderWidth: 1, borderColor: "#e5e5e5", borderRadius: 10, padding: 12 }}>

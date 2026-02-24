@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import LogIn from "./logIn";
@@ -9,6 +10,7 @@ import SignIn from "./signIn";
 import Products from "./products";
 import Carrito from "./carrito";
 import Cuenta from "./cuenta";
+import DetailProd from "./detail_prod";
 import { STORAGE_KEYS } from "../config/config";
 
 const Stack = createNativeStackNavigator();
@@ -16,7 +18,19 @@ const Tab = createBottomTabNavigator();
 
 function AppTabs() {
 	return (
-		<Tab.Navigator>
+		<Tab.Navigator
+			screenOptions={({ route }) => ({
+				tabBarIcon: ({ color, size }) => {
+					if (route.name === "Products") {
+						return <MaterialCommunityIcons name="store-outline" size={size} color={color} />;
+					}
+					if (route.name === "Carrito") {
+						return <MaterialCommunityIcons name="cart-outline" size={size} color={color} />;
+					}
+					return <MaterialCommunityIcons name="account-circle-outline" size={size} color={color} />;
+				},
+			})}
+		>
 			<Tab.Screen
 				name="Products"
 				component={Products}
@@ -88,6 +102,11 @@ export default function Navigator() {
 				name="MainTabs"
 				component={AppTabs}
 				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="DetailProd"
+				component={DetailProd}
+				options={{ title: "Detalle del producto" }}
 			/>
 		</Stack.Navigator>
 	);
