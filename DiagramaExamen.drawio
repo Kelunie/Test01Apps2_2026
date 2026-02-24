@@ -1,0 +1,107 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
+  <diagram name="Página-1" id="Bta3eI4IyCpJasR_zO-6">
+    <mxGraphModel dx="1426" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rDWicxU2MvQrHBgen7OT-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="55" width="70" x="230" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-11" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="55" width="70" x="90" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-2" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="FakeStore" vertex="1">
+          <mxGeometry height="200" width="200" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-3" parent="rDWicxU2MvQrHBgen7OT-2" style="rounded=1;whiteSpace=wrap;html=1;" value="debe tener, una barra que muestre o tenga un filtro, luego ir mostrando los productos, en formato de tarjeta, dos objetos por columna y al tocar dicha tarjeta lo lleve a los detalles de producto" vertex="1">
+          <mxGeometry height="180" width="160" x="30" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="productos" vertex="1">
+          <mxGeometry height="30" width="60" x="95" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-12" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Carrito" vertex="1">
+          <mxGeometry height="30" width="60" x="230" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="52.5" width="100" x="540" y="407.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-13" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="rDWicxU2MvQrHBgen7OT-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="iniciar sesion/ cuenta" vertex="1">
+          <mxGeometry height="50" width="100" x="540" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-17" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="320" />
+            </Array>
+            <mxPoint x="200" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-14" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="Detalle_prod" vertex="1">
+          <mxGeometry height="200" width="200" x="270" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-15" parent="rDWicxU2MvQrHBgen7OT-14" style="rounded=1;whiteSpace=wrap;html=1;" value="aqui se mostrara los detalles del producto, luego al final el btn de agregar al carrito, y la derecha un icono de un carrito que guardara la info en el local store, una vez agregado al carrito lo llevara al principal again" vertex="1">
+          <mxGeometry height="180" width="160" x="30" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-16" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="rDWicxU2MvQrHBgen7OT-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-19" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="Carrito" vertex="1">
+          <mxGeometry height="240" width="225" x="130" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-20" parent="rDWicxU2MvQrHBgen7OT-19" style="rounded=1;whiteSpace=wrap;html=1;" value="Aqui se mostrara todo los productos agregados, igualmente debe tener un filtro y se debe aparecer 2 por columna, donde venga la imagen, seguido abajo de su codigo, e informacion importante&lt;div&gt;y depsues de todo eso debe venir un total de todos los productos, cuanto cuesta dicha compra, se genera un codigo rng para simular mas&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="180" x="30" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-22" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-24" connectable="0" parent="rDWicxU2MvQrHBgen7OT-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Si" vertex="1">
+          <mxGeometry relative="1" x="-0.6647" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-23" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="790" />
+            </Array>
+            <mxPoint x="270" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-25" connectable="0" parent="rDWicxU2MvQrHBgen7OT-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="No" vertex="1">
+          <mxGeometry relative="1" x="-0.7486" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-21" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Si presiona la tarjeta" vertex="1">
+          <mxGeometry height="100" width="100" x="390" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-26" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="Cuenta" vertex="1">
+          <mxGeometry height="200" width="200" x="600" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-27" parent="rDWicxU2MvQrHBgen7OT-26" style="rounded=1;whiteSpace=wrap;html=1;" value="Muestra la informacion del usuario e hstorial de compras" vertex="1">
+          <mxGeometry height="180" width="160" x="30" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="rDWicxU2MvQrHBgen7OT-28" edge="1" parent="1" source="rDWicxU2MvQrHBgen7OT-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="rDWicxU2MvQrHBgen7OT-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
