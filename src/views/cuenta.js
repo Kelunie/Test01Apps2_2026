@@ -5,6 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios/dist/axios.min.js";
 
 import { ENDPOINTS, STORAGE_KEYS } from "../config/config";
+import { stylesAccount } from "../styles/style01";
 
 export default function Cuenta() {
 	const [username, setUsername] = useState("");
@@ -159,12 +160,15 @@ export default function Cuenta() {
 					<Text style={{ color: "#666" }}>Aún no hay compras registradas.</Text>
 				) : (
 					history.map((item, index) => (
-						<View key={`${index}-${item?.date || "item"}`} style={{ marginBottom: 8 }}>
-							<Text style={{ fontWeight: "700" }}>
-								Compra #{index + 1}
+						<TouchableOpacity
+							key={`${index}-${item?.date || "item"}`}
+							style={stylesAccount.historyCodeButton}
+							onPress={() => navigation.navigate("HistorialCompras", { purchase: item })}
+						>
+							<Text style={stylesAccount.historyCodeText}>
+								Código: {item?.code || `COMPRA-${index + 1}`}
 							</Text>
-							<Text style={{ color: "#555" }}>{JSON.stringify(item)}</Text>
-						</View>
+						</TouchableOpacity>
 					))
 				)}
 			</View>

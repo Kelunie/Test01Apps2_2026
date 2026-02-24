@@ -303,3 +303,86 @@ export const stylesCart = StyleSheet.create({
 		fontSize: 14,
 	},
 });
+
+export const stylesAccount = StyleSheet.create({
+	historyCodeButton: {
+		paddingVertical: 10,
+		paddingHorizontal: 12,
+		borderWidth: 1,
+		borderColor: "#dcdcdc",
+		borderRadius: 10,
+		marginBottom: 8,
+		backgroundColor: "#fafafa",
+	},
+	historyCodeText: {
+		fontWeight: "700",
+		color: "#2f4f92",
+	},
+});
+
+export const stylesPurchaseHistory = StyleSheet.create({
+	container: {
+		flex: 1,
+		padding: 16,
+	},
+	headerCard: {
+		backgroundColor: "#fff",
+		borderWidth: 1,
+		borderColor: "#ddd",
+		borderRadius: 14,
+		padding: 14,
+		marginBottom: 12,
+	},
+	headerTitle: {
+		fontSize: 20,
+		fontWeight: "700",
+		marginBottom: 8,
+	},
+	headerText: {
+		fontSize: 14,
+		color: "#555",
+		marginBottom: 4,
+	},
+	listContent: {
+		paddingBottom: 20,
+	},
+	card: {
+		flex: 1,
+		backgroundColor: "#fff",
+		borderWidth: 1,
+		borderColor: "#eee",
+		borderRadius: 14,
+		padding: 12,
+		marginBottom: 12,
+		marginHorizontal: 4,
+	},
+	cardImage: {
+		width: "100%",
+		height: 90,
+		marginBottom: 8,
+	},
+	cardTitle: {
+		fontSize: 13,
+		fontWeight: "700",
+		minHeight: 34,
+	},
+	cardInfo: {
+		fontSize: 12,
+		color: "#555",
+		marginTop: 2,
+	},
+	cardPrice: {
+		fontSize: 13,
+		fontWeight: "700",
+		color: "#2f4f92",
+		marginTop: 4,
+	},
+	columnWrap: {
+		justifyContent: "space-between",
+	},
+	emptyText: {
+		textAlign: "center",
+		color: "#666",
+		marginTop: 24,
+	},
+});

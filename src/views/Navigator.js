@@ -11,6 +11,7 @@ import Products from "./products";
 import Carrito from "./carrito";
 import Cuenta from "./cuenta";
 import DetailProd from "./detail_prod";
+import HistorialCompras from "./historialCompras";
 import { STORAGE_KEYS } from "../config/config";
 
 const Stack = createNativeStackNavigator();
@@ -107,6 +108,11 @@ export default function Navigator() {
 				name="DetailProd"
 				component={DetailProd}
 				options={{ title: "Detalle del producto" }}
+			/>
+			<Stack.Screen
+				name="HistorialCompras"
+				component={HistorialCompras}
+				options={{ title: "Historial de compra" }}
 			/>
 		</Stack.Navigator>
 	);
