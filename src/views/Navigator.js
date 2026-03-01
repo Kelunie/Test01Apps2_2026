@@ -18,102 +18,140 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function AppTabs() {
-	return (
-		<Tab.Navigator
-			screenOptions={({ route }) => ({
-				tabBarIcon: ({ color, size }) => {
-					if (route.name === "Products") {
-						return <MaterialCommunityIcons name="store-outline" size={size} color={color} />;
-					}
-					if (route.name === "Carrito") {
-						return <MaterialCommunityIcons name="cart-outline" size={size} color={color} />;
-					}
-					return <MaterialCommunityIcons name="account-circle-outline" size={size} color={color} />;
-				},
-			})}
-		>
-			<Tab.Screen
-				name="Products"
-				component={Products}
-				options={{
-					title: "Productos",
-					tabBarLabel: "Productos",
-				}}
-			/>
-			<Tab.Screen
-				name="Carrito"
-				component={Carrito}
-				options={{
-					title: "Carrito",
-					tabBarLabel: "Carrito",
-				}}
-			/>
-			<Tab.Screen
-				name="Cuenta"
-				component={Cuenta}
-				options={{
-					title: "Cuenta",
-					tabBarLabel: "Cuenta",
-				}}
-			/>
-		</Tab.Navigator>
-	);
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarActiveTintColor: "#7a2c8f",
+        tabBarInactiveTintColor: "#7e6d8e",
+        tabBarStyle: {
+          backgroundColor: "#ffffff",
+          borderTopColor: "#dfd0e8",
+        },
+        headerStyle: {
+          backgroundColor: "#f2e8f7",
+        },
+        headerTintColor: "#67237a",
+        headerTitleStyle: {
+          fontWeight: "700",
+        },
+        tabBarIcon: ({ color, size }) => {
+          if (route.name === "Products") {
+            return (
+              <MaterialCommunityIcons
+                name="store-outline"
+                size={size}
+                color={color}
+              />
+            );
+          }
+          if (route.name === "Carrito") {
+            return (
+              <MaterialCommunityIcons
+                name="cart-outline"
+                size={size}
+                color={color}
+              />
+            );
+          }
+          return (
+            <MaterialCommunityIcons
+              name="account-circle-outline"
+              size={size}
+              color={color}
+            />
+          );
+        },
+      })}
+    >
+      <Tab.Screen
+        name="Products"
+        component={Products}
+        options={{
+          title: "Productos",
+          tabBarLabel: "Productos",
+        }}
+      />
+      <Tab.Screen
+        name="Carrito"
+        component={Carrito}
+        options={{
+          title: "Carrito",
+          tabBarLabel: "Carrito",
+        }}
+      />
+      <Tab.Screen
+        name="Cuenta"
+        component={Cuenta}
+        options={{
+          title: "Cuenta",
+          tabBarLabel: "Cuenta",
+        }}
+      />
+    </Tab.Navigator>
+  );
 }
 
 export default function Navigator() {
-	const [isCheckingSession, setIsCheckingSession] = useState(true);
-	const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isCheckingSession, setIsCheckingSession] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-	useEffect(() => {
-		const loadSession = async () => {
-			try {
-				const token = await AsyncStorage.getItem(STORAGE_KEYS.authToken);
-				setIsAuthenticated(Boolean(token));
-			} catch (error) {
-				setIsAuthenticated(false);
-			} finally {
-				setIsCheckingSession(false);
-			}
-		};
+  useEffect(() => {
+    const loadSession = async () => {
+      try {
+        const token = await AsyncStorage.getItem(STORAGE_KEYS.authToken);
+        setIsAuthenticated(Boolean(token));
+      } catch (error) {
+        setIsAuthenticated(false);
+      } finally {
+        setIsCheckingSession(false);
+      }
+    };
 
-		loadSession();
-	}, []);
+    loadSession();
+  }, []);
 
-	if (isCheckingSession) {
-		return (
-			<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-				<ActivityIndicator size="large" />
-			</View>
-		);
-	}
+  if (isCheckingSession) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
 
-	return (
-		<Stack.Navigator initialRouteName={isAuthenticated ? "MainTabs" : "LogIn"}>
-			<Stack.Screen
-				name="LogIn"
-				component={LogIn}
-				options={{ title: "Iniciar sesión" }}
-			/>
-			<Stack.Screen
-				name="SignIn"
-				component={SignIn}
-				options={{ title: "Crear cuenta" }}
-			/>
-			<Stack.Screen
-				name="MainTabs"
-				component={AppTabs}
-				options={{ headerShown: false }}
-			/>
-			<Stack.Screen
-				name="DetailProd"
-				component={DetailProd}
-				options={{ title: "Detalle del producto" }}
-			/>
-			<Stack.Screen
-				name="HistorialCompras"
-				component={HistorialCompras}
-				options={{ title: "Historial de compra" }}
-			/>
-		</Stack.Navigator>
-	);
+  return (
+    <Stack.Navigator
+      initialRouteName={isAuthenticated ? "MainTabs" : "LogIn"}
+      screenOptions={{
+        headerStyle: { backgroundColor: "#f2e8f7" },
+        headerTintColor: "#67237a",
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    >
+      <Stack.Screen
+        name="LogIn"
+        component={LogIn}
+        options={{ title: "Iniciar sesión" }}
+      />
+      <Stack.Screen
+        name="SignIn"
+        component={SignIn}
+        options={{ title: "Crear cuenta" }}
+      />
+      <Stack.Screen
+        name="MainTabs"
+        component={AppTabs}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DetailProd"
+        component={DetailProd}
+        options={{ title: "Detalle del producto" }}
+      />
+      <Stack.Screen
+        name="HistorialCompras"
+        component={HistorialCompras}
+        options={{ title: "Historial de compra" }}
+      />
+    </Stack.Navigator>
+  );
 }
